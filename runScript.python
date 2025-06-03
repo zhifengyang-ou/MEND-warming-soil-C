@@ -1,0 +1,31 @@
+import os
+
+# File paths with backslashes for Windows
+FSRCS = [
+    "src\MOD_Photosynthesis.F90",
+    "src\MOD_MEND_TYPE.F90",
+    "src\MOD_OPT_TYPE.F90",
+    "src\MOD_USRFS.F90",
+    "src\MOD_STRING.F90",
+    "src\MOD_MEND.F90",
+    "src\MOD_MCMC.F90",
+    "src\MOD_OPT.F90",
+    "src\MEND_IN.F90",
+    "src\MEND_main.F90"
+]
+
+CPPFLAGS = ''
+
+# Compile Fortran files
+os.system(f"gfortran.exe {' '.join(FSRCS)} {CPPFLAGS} -o biocon.exe")
+
+# Execute the compiled program
+os.system("biocon.exe")
+
+# Remove the compiled executable
+os.remove("biocon.exe")
+
+# Remove .mod files
+for filename in os.listdir():
+    if filename.endswith(".mod"):
+        os.remove(filename)

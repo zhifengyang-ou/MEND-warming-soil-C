@@ -1,0 +1,27 @@
+gfortran -c FBEM.F90 MOD_MEND_TYPE.F90 MOD_OPT_TYPE.F90 MOD_USRFS.F90 MOD_STRING.F90 MOD_MEND.F90 MOD_MCMC.F90 MOD_OPT.F90 MEND_IN.F90 MEND_main.F90
+
+gfortran -o xxx FBEM.o          MEND_main.o     MOD_MEND.o      MOD_OPT.o       MOD_STRING.o MEND_IN.o       MOD_MCMC.o      MOD_MEND_TYPE.o MOD_OPT_TYPE.o  MOD_USRFS.o
+
+mv xxx ../
+cd ..
+./xxx
+
+======================== working script ===================
+SRC=./src
+OBJ=./src
+
+gfortran -c $OBJ/FBEM.F90 -o $OBJ/FBEM.o
+gfortran -c $OBJ/MOD_MEND_TYPE.f90 -o $OBJ/MOD_MEND_TYPE.o
+gfortran -c $SRC/MOD_OPT_TYPE.F90 -o $SRC/MOD_OPT_TYPE.o
+gfortran -c $SRC/MOD_USRFS.F90 -o $SRC/MOD_USRFS.o
+gfortran -c $SRC/MOD_STRING.F90 -o $SRC/MOD_STRING.o
+gfortran -c $SRC/MOD_MEND.F90 -o $SRC/MOD_MEND.o
+gfortran -c $SRC/MOD_MCMC.F90 -o $SRC/MOD_MCMC.o
+gfortran -c $SRC/MOD_OPT.F90 -o $SRC/MOD_OPT.o
+gfortran -c $SRC/MEND_IN.F90 -o $SRC/MEND_IN.o
+gfortran -c $SRC/MEND_main.F90 -o $SRC/MEND_main.o
+
+gfortran -o xxx ./src/FBEM.o  ./src/MEND_main.o     ./src/MOD_MEND.o      ./src/MOD_OPT.o       ./src/MOD_STRING.o ./src/MEND_IN.o      ./src/MOD_MCMC.o      ./src/MOD_MEND_TYPE.o ./src/MOD_OPT_TYPE.o  ./src/MOD_USRFS.o
+
+
+./xxx

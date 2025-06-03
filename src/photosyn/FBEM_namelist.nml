@@ -1,0 +1,111 @@
+&main_para
+    f_Ci=0.87
+    alpha_q=0.28
+    Vm_25=100.0
+    Ea_vm=58520.0
+    Gamma_star25=42.5
+    Ea_gamma=60000.0
+    Ea_Kc=100000.0                   
+    Ea_Ko=35948.0
+    Kc_25=460.0
+    Ko_25=0.33
+    r_JmVm=1.79
+    g1=9.0 !422.0
+    D0=2.74
+    kn=0.8
+    Reco0=2.5
+    Q10=2.0
+    a1=0.1
+/
+
+&C3_para
+    f_Ci=0.87
+    alpha_q=0.28
+    Vm_25=40.0
+    Ea_vm=58520.0
+    Gamma_star25=42.5
+    Ea_gamma=60000.0
+    Ea_Kc=100000.0                   
+    Ea_Ko=35948.0
+    Kc_25=460.0
+    Ko_25=0.33
+    r_JmVm=1.79
+    g1=9.0 !422.0
+    D0=2.74
+    kn=0.8
+    Reco0=2.5
+    Q10=2.0
+    a1=0.1
+/
+
+&C4_para
+    f_Ci=0.87
+    alpha_q=0.28
+    Vm_25=70.0
+    Ea_vm=58520.0
+    Gamma_star25=42.5
+    Ea_gamma=60000.0
+    Ea_Kc=100000.0                   
+    Ea_Ko=35948.0
+    Kc_25=460.0
+    Ko_25=0.33
+    r_JmVm=1.79
+    g1=9.0 !422.0
+    D0=2.74
+    kn=0.8
+    Reco0=2.5
+    Q10=2.0
+    a1=0.1
+/
+
+&legume_para
+    f_Ci=0.87
+    alpha_q=0.28
+    Vm_25=50.0
+    Ea_vm=58520.0
+    Gamma_star25=42.5
+    Ea_gamma=60000.0
+    Ea_Kc=100000.0                   
+    Ea_Ko=35948.0
+    Kc_25=460.0
+    Ko_25=0.33
+    r_JmVm=1.79
+    g1=9.0 !422.0
+    D0=2.74
+    kn=0.8
+    Reco0=2.5
+    Q10=2.0
+    a1=0.1
+/
+
+&aCaN
+LAIscalar = 0.8
+fLAI_C3 = 0.2 ! derived from biomass proportion
+fLAI_C4 = 0.7
+fLAI_legume = 0.1 
+/
+
+&aCeN
+LAIscalar = 1.5
+fLAI_C3 = 0.08 ! derived from biomass proportion
+fLAI_C4 = 0.9
+fLAI_legume = 0.02 
+/
+
+&eCaN
+LAIscalar = 1.0
+fLAI_C3 = 0.1 ! derived from biomass proportion
+fLAI_C4 = 0.8
+fLAI_legume = 0.1 
+/
+
+&eCeN
+LAIscalar = 1.5
+fLAI_C3 = 0.15 ! derived from biomass proportion
+fLAI_C4 = 0.8
+fLAI_legume = 0.05 
+/
+
+&dummy
+dummyA = 1.0
+/
