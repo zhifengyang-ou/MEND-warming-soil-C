@@ -1,16 +1,17 @@
 # MEND-warming-soil-C
 
-The MEND model is deisigned to simulate soil C degradation. The code is inside src/ while input and output data is inside userio/
+The MEND model is deisigned to simulate soil C degradation. The code is inside src/ while input and output data is inside userio/. 
+In addition to the biogeochemical modeling, other statistical analyses code for main figures of paper is inside /statistical analysis code.
 
 ## Requirements
-You need to install gfortran, make sure the gfortran is in the PATH variable.
+You need to install gfortran, make sure the gfortran is in the PATH variable. Current default running environment is windows.
 
 ## Usage
 To use MEND to do simulation or optimization, you could run
 
-or run a script that could store the namelist information into the output folder as well as some log information
+or run a script that could store the namelist information into the output folder as well as some log information. The major setting of model parameterization and input/output is inside /MEND_namelist.nml file and parameter setting for GPP simulation is inside FBEM_namelist.nml.
 ```
-python pipeline.py "some log information here
+python pipeline.py "some log information here"
 ```
 
 ## Introduction to file system
